@@ -5,4 +5,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.cupertinoActionSheetTitle),
   ExampleNames(Strings.alertTitle),
   ExampleNames(Strings.tabBarExampleTitle),
+  ExampleNames(Strings.sliverNavigationBarTitle),
 ];

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_ios_playground/home.dart';
 import 'package:flutter_ios_playground/ui/alert_example/alert_example.dart';
 import 'package:flutter_ios_playground/ui/cupertino_action_sheet/cupertino_action_sheet.dart';
+import 'package:flutter_ios_playground/ui/nav_bar/cupertino_sliver_navigation_bar.dart';
 import 'package:flutter_ios_playground/ui/tab_bar/tab_bar_example.dart';
 import 'package:flutter_ios_playground/utils/Strings.dart';
 
@@ -27,6 +28,8 @@ class MyApp extends StatelessWidget {
           AlertExample(Strings.alertTitle),
       Strings.tabBarExampleRoutes: (BuildContext context) =>
           CupertinoTabBarExample(Strings.tabBarExampleTitle),
+      Strings.sliverNavigationBarRoutes: (BuildContext context) =>
+          CupertinoSliverNavigationBarExample(),
     };
   }
 }

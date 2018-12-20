@@ -18,47 +18,73 @@ class _CupertinoTabBarExampleState extends State<CupertinoTabBarExample> {
         previousPageTitle: "Home",
       ),
       child: Container(
-        child: CupertinoTabScaffold(
-          tabBar: CupertinoTabBar(
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.home),
-                title: Text('Home'),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.conversation_bubble),
-                title: Text('Support'),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.profile_circled),
-                title: Text('Profile'),
-              ),
-            ],
+        child: SafeArea(
+          child: CupertinoTabScaffold(
+            tabBar: CupertinoTabBar(
+              items: [
+                BottomNavigationBarItem(
+                  icon: Icon(CupertinoIcons.conversation_bubble),
+                  title: Text('Messages'),
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(CupertinoIcons.phone),
+                  title: Text('Contacts'),
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(CupertinoIcons.profile_circled),
+                  title: Text('Profile'),
+                ),
+              ],
+            ),
+            tabBuilder: (BuildContext context, int index) {
+              assert(index >= 0 && index <= 2);
+              switch (index) {
+                case 0:
+                  return CupertinoTabView(
+                    builder: (BuildContext context) =>
+                        Container(
+                          color: CupertinoColors.activeBlue,
+                          child: Center(
+                              child: Text(
+                                "Messages",
+                                style: TextStyle(color: CupertinoColors.white),
+                              )),
+                        ),
+                    defaultTitle: 'Messages',
+                  );
+                  break;
+                case 1:
+                  return CupertinoTabView(
+                    builder: (BuildContext context) =>
+                        Container(
+                          color: CupertinoColors.activeOrange,
+                          child: Center(
+                              child: Text(
+                                "Contacts",
+                                style: TextStyle(color: CupertinoColors.white),
+                              )),
+                        ),
+                    defaultTitle: 'Contacts',
+                  );
+                  break;
+                case 2:
+                  return CupertinoTabView(
+                    builder: (BuildContext context) =>
+                        Container(
+                          color: CupertinoColors.activeGreen,
+                          child: Center(
+                              child: Text(
+                                "Profile",
+                                style: TextStyle(color: CupertinoColors.white),
+                              )),
+                        ),
+                    defaultTitle: 'Profile',
+                  );
+                  break;
+              }
+              return null;
+            },
           ),
-          tabBuilder: (BuildContext context, int index) {
-            assert(index >= 0 && index <= 2);
-            switch (index) {
-              case 0:
-                return CupertinoTabView(
-                  builder: (BuildContext context) => Center(child: Text("hello"),),
-                  defaultTitle: 'Colors',
-                );
-                break;
-              case 1:
-                return CupertinoTabView(
-                  builder: (BuildContext context) => Text("hello"),
-                  defaultTitle: 'Support Chat',
-                );
-                break;
-              case 2:
-                return CupertinoTabView(
-                  builder: (BuildContext context) => Text("hello"),
-                  defaultTitle: 'Account',
-                );
-                break;
-            }
-            return null;
-          },
         ),
       ),
     );
