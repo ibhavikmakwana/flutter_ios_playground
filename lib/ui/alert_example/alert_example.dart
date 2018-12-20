@@ -23,7 +23,8 @@ class AlertExample extends StatelessWidget {
                       title: Text("Alert"),
                       content: Text("This is an alert.\n "),
                       actions: <Widget>[
-                        CupertinoActionSheetAction(
+                        CupertinoDialogAction(
+                          isDestructiveAction: true,
                           child: Text("Discard"),
                           onPressed: () {
                             Navigator.pop(context);

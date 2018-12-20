@@ -9,8 +9,10 @@ class Strings {
   ///Titles
   static const String cupertinoActionSheetTitle = "CupertinoActionSheet";
   static const String alertTitle = "Alert";
+  static const String tabBarExampleTitle = "CupertinoTabBar Example";
 
   ///Routes
   static const String cupertinoActionSheetRoutes = "/CupertinoActionSheet";
   static const String alertRoutes = "/Alert";
+  static const String tabBarExampleRoutes = "/CupertinoTabBar Example";
 }
