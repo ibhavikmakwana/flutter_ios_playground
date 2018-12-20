@@ -18,14 +18,14 @@ class _MyHomePageState extends State<MyHomePage> {
       navigationBar: buildCupertinoNavigationBar(),
       child: SafeArea(
         child: ListView.builder(
-          itemBuilder: (context, index) => GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, "/${names[index].title}");
-                },
-                child: Center(
-                  child: Text(names[index].title),
-                ),
-              ),
+          itemBuilder: (context, index) => Material(
+            child: ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, "/${names[index].title}");
+              },
+              title: Center(child: Text(names[index].title)),
+            ),
+          ),
           itemCount: names.length,
         ),
       ),

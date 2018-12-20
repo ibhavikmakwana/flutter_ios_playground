@@ -8,8 +8,9 @@ class Strings {
 
   ///Titles
   static const String cupertinoActionSheetTitle = "CupertinoActionSheet";
-
+  static const String alertTitle = "Alert";
 
   ///Routes
   static const String cupertinoActionSheetRoutes = "/CupertinoActionSheet";
+  static const String alertRoutes = "/Alert";
 }

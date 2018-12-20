@@ -19,6 +19,7 @@ class CupertinoActionSheetExampleState
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text(widget.title),
+        previousPageTitle: "Home",
       ),
       child: new Builder(
         builder: (BuildContext context) {
@@ -31,7 +32,7 @@ class CupertinoActionSheetExampleState
                   style: TextStyle(color: CupertinoColors.white),
                 ),
                 onPressed: () {
-                  containerForSheet<String>(
+                  openActionSheet<String>(
                     context: context,
                     child: CupertinoActionSheet(
                         title: const Text("Action Title"),
@@ -62,10 +63,11 @@ class CupertinoActionSheetExampleState
                             },
                           ),
                           CupertinoActionSheetAction(
-                            child: const Text("Action 4"),
+                            child: const Text("Delete"),
                             onPressed: () {
                               Navigator.pop(context);
                             },
+                            isDestructiveAction: true,
                           ),
                         ],
                         cancelButton: CupertinoActionSheetAction(
@@ -83,7 +85,7 @@ class CupertinoActionSheetExampleState
     );
   }
 
-  void containerForSheet<T>({BuildContext context, Widget child}) {
+  void openActionSheet<T>({BuildContext context, Widget child}) {
     showCupertinoModalPopup<T>(
       context: context,
       builder: (BuildContext context) => child,
