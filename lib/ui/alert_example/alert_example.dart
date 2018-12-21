@@ -24,8 +24,13 @@ class AlertExample extends StatelessWidget {
                       content: Text("This is an alert.\n "),
                       actions: <Widget>[
                         CupertinoDialogAction(
-                          isDestructiveAction: true,
-                          child: Text("Discard"),
+                          child: Text("Don't Allow"),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        CupertinoDialogAction(
+                          child: Text("Allow"),
                           onPressed: () {
                             Navigator.pop(context);
                           },
