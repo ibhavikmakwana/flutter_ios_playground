@@ -11,12 +11,15 @@ class Strings {
   static const String alertTitle = "Alert";
   static const String tabBarExampleTitle = "CupertinoTabBar Example";
   static const String sliverNavigationBarTitle = "SliverNavigationBar";
-
+  static const String cupertinoTimerPickerTitle = "CupertinoTimerPicker";
   ///Routes
   static const String cupertinoActionSheetRoutes = "/CupertinoActionSheet";
   static const String alertRoutes = "/Alert";
   static const String tabBarExampleRoutes = "/CupertinoTabBar Example";
   static const String sliverNavigationBarRoutes = "/SliverNavigationBar";
+  static const String cupertinoTimerPickerRoutes = "/CupertinoTimerPicker";
+
+
 
   static const String lorem =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum hendrerit volutpat. Quisque vel urna eget nunc placerat ultricies vitae eu felis. Nam nec ex non eros mattis luctus. Integer viverra pellentesque diam laoreet porta. Proin ac bibendum erat. Praesent sed orci leo. Proin lobortis urna vel ultrices tempor. Donec sed ultrices mi. Nam placerat finibus est, eu tincidunt tortor dapibus nec. Mauris tincidunt, tellus ac fringilla placerat, odio sapien ullamcorper elit, sed posuere sapien tortor vitae est. In eu faucibus neque. Integer eleifend libero tristique tempor cursus. Pellentesque dapibus lectus id nisl feugiat sollicitudin. Duis est neque, interdum id velit condimentum, dapibus varius justo. Etiam ut lacus ornare, faucibus metus ornare, sodales ipsum." +

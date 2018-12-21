@@ -6,4 +6,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.alertTitle),
   ExampleNames(Strings.tabBarExampleTitle),
   ExampleNames(Strings.sliverNavigationBarTitle),
+  ExampleNames(Strings.cupertinoTimerPickerTitle),
 ];
